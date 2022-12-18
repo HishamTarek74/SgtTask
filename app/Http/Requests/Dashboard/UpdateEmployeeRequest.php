@@ -28,7 +28,7 @@ class UpdateEmployeeRequest extends FormRequest
             'first_name' => 'required|string|max:190',
             'last_name' => 'required|string|max:190',
             'company_id' => 'required|integer|exists:companies,id',
-            'email' => "nullable|email|unique:employees,email," . request()->segment(3),
+            'email' => "nullable|email:rfc,dns|unique:employees,email," . request()->segment(3),
             'phone' => "nullable|numeric|unique:employees,phone," . request()->segment(3),
             'occupation' => 'nullable|string|max:190',
         ];

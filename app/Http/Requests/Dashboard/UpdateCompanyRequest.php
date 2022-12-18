@@ -26,7 +26,7 @@ class UpdateCompanyRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:190',
-           'email' => "nullable|email|unique:companies,email,".request()->segment(3),
+           'email' => "nullable|email:rfc,dns|unique:companies,email,".request()->segment(3),
            // 'email' => ['nullable', 'email:rfc,dns', Rule::unique('companies')->ignore($this->id)],
             'website' => 'nullable|url',
             'logo' => 'nullable|file|mimes:jpeg,png,jpg,gif,svg|max:2048|dimensions:width=100,height=100',//|dimensions:width=100,height=100
