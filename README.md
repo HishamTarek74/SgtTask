@@ -24,10 +24,14 @@ run php artisan migrate --db:seed
 ```
 run php artisan storage:link
 ```
+```
+run npm install && npm run dev
+```
 - visit : http://localhost:8000
 - email : admin@admin.com
 - password : password
 
 ### Note
 - There is One EndPoint to get TopCompanies BasedOn Revenue 
+- Add top 10 companies in home page as landing page
   
